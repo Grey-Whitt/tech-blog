@@ -1,0 +1,58 @@
+.bgd {
+    background-color: rgb(70, 70, 83);
+}
+
+.row {
+    padding: 10px;
+}
+.nb {
+    margin-bottom: 3%;
+}
+
+.post {
+    margin-bottom: 2%;
+    line-height: 150%;
+}
+
+.post .title span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7d7d7d;
+}
+
+.meta {
+    font-size: 90%;
+    margin-bottom: .5%;
+    opacity: .6;
+}
+
+.post-li {
+    border-radius: 15px;
+}
+
+.points {
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+.upv {
+    padding-right: 5px;
+}
+
+.post-list {
+    margin: 3%;
+}
+
+a {
+    text-decoration: none !important;
+    font-weight: bold;
+    color: white;
+    transition: color .1s;
+}
+
+a:hover {
+    color: #dadada;
+}
+
+.log {
+    margin-top: 20px;  
+}
