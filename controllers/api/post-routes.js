@@ -10,17 +10,19 @@ router.post('/', (req, res) => {
     //     "post_content": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
     //      "user_id": 1         
     // }
+    if (req.session) {
+        Post.create({
+            title: req.body.title,
+            post_content: req.body.post_content,
+            user_id: req.body.user_id
+        })
+            .then(dbPostData => res.json(dbPostData))
+            .catch(err => {
+                console.log(err);
+                res.status(500).json(err);
+            });
+    }
 
-    Post.create({
-        title: req.body.title,
-        post_content: req.body.post_content,
-        user_id: req.body.user_id
-    })
-        .then(dbPostData => res.json(dbPostData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
 })
 
 router.get('/', (req, res) => {
@@ -55,15 +57,18 @@ router.get('/', (req, res) => {
         });
 })
 
+// PUT /api/posts/upvote
 router.put('/upvote', (req, res) => {
-
-    Post.upvote({ ...req.body, user_id: req.body.user_id }, { Vote, Comment, User })
-        .then(updatedVoteData => res.json(updatedVoteData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-
+    // make sure the session exists first
+    if (req.session) {
+        // pass session id along with all destructured properties on req.body
+        Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+            .then(updatedVoteData => res.json(updatedVoteData))
+            .catch(err => {
+                console.log(err);
+                res.status(500).json(err);
+            });
+    }
 });
 
 router.get('/:id', (req, res) => {
@@ -125,17 +130,16 @@ router.put('/:id', (req, res) => {
 
 //add auth
 router.delete('/:id', (req, res) => {
-    Post.destroy({
-        where: {
-            id: req.params.id
-        }
+    Post.findOne({
+        where: { id: req.params.id },
+        include: [Comment]
     })
-        .then(dbPostData => {
-            if (!dbPostData) {
-                res.status(404).json({ message: 'No post found with this id' });
-                return;
-            }
-            res.json(dbPostData);
+        .then(post => {
+            post.comments.forEach(comment => {
+                comment.destroy();
+            })
+            post.destroy();
+            res.end();
         })
         .catch(err => {
             console.log(err);
