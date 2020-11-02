@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment, Vote } = require("../../models");
-
-//add log out
-//add update users
+const auth = require('../../utils/auth')
 
 router.get('/', (req, res) => {
     User.findAll({
@@ -106,8 +104,7 @@ router.post('/login', (req, res) => {
 });
 
 //logout
-//add auth
-router.post('/logout', (req, res) => {
+router.post('/logout', auth, (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
@@ -118,10 +115,8 @@ router.post('/logout', (req, res) => {
     }
 });
 
-
-//add auth
 // DELETE /api/users/1
-router.delete('/:id', (req, res) => {
+router.delete('/:id', auth, (req, res) => {
     User.destroy({
         where: {
             id: req.params.id

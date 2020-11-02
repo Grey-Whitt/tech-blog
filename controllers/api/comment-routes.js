@@ -1,6 +1,6 @@
 const Comment = require('../../models/Comments')
 const router = require('express').Router()
-
+const auth = require('../../utils/auth')
 
 router.get('/', (req, res) => {
     Comment.findAll({})
@@ -11,8 +11,8 @@ router.get('/', (req, res) => {
         });
 });
 
-//add auth
-router.post('/', (req, res) => {
+
+router.post('/', auth, (req, res) => {
     // check the session
     //if (req.session) {
         Comment.create({
