@@ -93,3 +93,16 @@ a:hover {
 .comment-form button {
     margin-right: 10px;
 }
+
+.yourPosts {
+    list-style: none;
+    padding-inline-start: 0px !important;
+}
+
+.newPost {
+    margin-bottom: 5%;
+}
+
+.create {
+    margin-top: 2%;
+}
