@@ -43,6 +43,7 @@ router.get('/', auth, (req, res) => {
         });
 });
 
+//route for editing posts
 router.get('/edit/:id', auth, (req, res) => {
     Post.findOne({
         where: {

@@ -1,3 +1,4 @@
+//makes a put request with the data that the users chooses to update the post with
 async function editFormHandler(event) {
     event.preventDefault();
 

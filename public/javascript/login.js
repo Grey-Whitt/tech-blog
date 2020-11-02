@@ -1,3 +1,4 @@
+//logs the user in if the email and password are correct
 async function loginFormHandler(event) {
     event.preventDefault();
 

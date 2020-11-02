@@ -1,3 +1,4 @@
+//this handles commenting by grabbing the data that is input and makes a request to the database
 async function commentFormHandler(event) {
     event.preventDefault();
 

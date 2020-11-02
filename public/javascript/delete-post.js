@@ -1,3 +1,4 @@
+//gets the posts id from the url and requests to delete that post from the database
 async function deleteFormHandler(event) {
     event.preventDefault();
 

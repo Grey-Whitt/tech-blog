@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
         integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
-        <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 
@@ -32,9 +32,30 @@
         </div>
     </nav>
 
-    <main>
+    <main class="content">
         {{{body}}}
     </main>
+
+    <footer class="footer"></footer>
+        
+        <div class="row ftrRow">
+            <div class="links col-8">
+                <p class="font-weight-bold text-uppercase lnk">Links</p>
+                <ul class="list-unstyled">
+                    <li class="meta">
+                        <a href="#!">My GitHub</a>   
+                    </li>
+                    <li class="meta">
+                        <a href="#!">This Projects Repo</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="col-2 thx"><p class="font-weight-bold text-uppercase lnk">Thanks For Visiting!</p></div>
+        </div>
+    </footer>
+
+
 
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>

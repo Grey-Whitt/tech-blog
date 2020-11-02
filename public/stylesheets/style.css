@@ -1,5 +1,23 @@
+html, body {
+    height: 100%;
+    font-size: x-large;
+}
+
 body {
-    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nb {
+    margin-bottom: 2%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
 }
 
 .bgd {
@@ -8,10 +26,6 @@ body {
 
 .row {
     padding: 10px;
-}
-
-.nb {
-    margin-bottom: 3%;
 }
 
 .post {
@@ -49,7 +63,6 @@ body {
 
 a, .header {
     text-decoration: none !important;
-    font-weight: bold;
     color: white;
     transition: color .1s;
 }
@@ -123,4 +136,26 @@ a:hover {
     margin-left: 5px;
 }
 
+footer {
+    border-top: 1px solid #ccc;
+    margin-top: 2%;
+    padding: 5px;
+    font-size: 110%;
+}
 
+.links {
+    line-height: normal;
+    margin-left: 2%;
+}
+
+.lnk {
+    margin-bottom: 2px;
+}
+
+.thx {
+    margin: auto;
+}
+
+.ftrRow {
+    margin: 0;
+}

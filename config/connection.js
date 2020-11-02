@@ -4,6 +4,7 @@ require('dotenv').config();
 
 let sequelize;
 
+//use jawsdb if availible else create new database
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {

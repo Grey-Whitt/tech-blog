@@ -1,3 +1,4 @@
+//creates an upvote on the selected post
 async function upvoteClickHandler(event) {
     event.preventDefault();
 

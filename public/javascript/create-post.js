@@ -1,3 +1,4 @@
+//works similarly to comment.js
 async function newFormHandler(event) {
     event.preventDefault();
 
