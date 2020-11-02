@@ -25,13 +25,16 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: '53cr37',
   cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+    checkExpirationInterval: 1000 * 60 * 5, //checks if user is idle every 5 minutes
+    expiration: 1000 * 60 * 15 //if user is idle for 15 minutes the session ends
+  }),
+
 };
 //
 
@@ -42,5 +45,5 @@ app.use(routes);
 
 // turn on connection to db and server
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening'));
 });
