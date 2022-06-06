@@ -1,7 +1,7 @@
 # Tech Blog
 
 ## Description:
-Forrum style website built following the MVC paradigm, it features a front-end created using HTML5, CSS3, Bootstrap, and the handlebars templating engine. REST API built with express allows users to create posts, comments, and upvotes that are stored in a MySQL database
+Forrum style website built following the MVC paradigm, it features a front-end created using HTML5, CSS3, Bootstrap, and the handlebars templating engine. REST API built with express allows users to create posts, comments, and upvotes that are stored in a MySQL database. Models and queries were built with the Sequelize ORM.
 
 # Table of Contents
 
