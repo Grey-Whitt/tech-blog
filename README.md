@@ -1,26 +1,42 @@
-# tech-blog
-![License](https://img.shields.io/badge/-Contributor_Covenant-blueviolet)
+# Tech Blog
 
-## Description
-This is a fully functioning forum/blog style website which uses the full stack. Users can sign up, log in, post, comment, like, and registered users have limited access to features like posting, upvoting, and commenting, as well as the user dashboard. No starter code was provided and it took about 3 days to make. Day 1 was used to set up the data base and routes, day 2 was used to set up the front end, and day 3 was used to get the front and back end to communicate with each other.You can view the website and make an account here - https://gw-tech-blog.herokuapp.com/
+## Description:
+Forrum style website built following the MVC paradigm, it features a front-end created using HTML5, CSS3, Bootstrap, and the handlebars templating engine. REST API built with express allows users to create posts, comments, and upvotes that are stored in a MySQL database
 
-* [Contribution](#Contribution)
-* [Contact](#Contact)
+# Table of Contents
 
+- [Repository](#repository)
+- [Examples](#examples)
+- [Technologies Used](#technologies-used)
+- [Questions](#questions)
+- [Contributions](#contributing)
+- [License](#license)
 
+## Repository:
+
+---
+
+- [Deployed Application](https://gw-tech-blog.herokuapp.com/)
+
+- [My Github Profile](https://github.com/Grey-Whitt)
+
+- [This Repository](https://github.com/Grey-Whitt/portfolio-v3)
+
+## Examples
+
+---
 
 ![Full site](./full-site.png)
 
 
-## Contribution
-    You can contribute to this project by making a pull request!
-
-
 ## Technologies Used
+
+---
+
 - JavaScript
-- HTML
-- CSS
-- MySql
+- HTML5
+- CSS3
+- MySQL2
 - Node
 - Sequelize
 - Bcrypt
@@ -29,18 +45,43 @@ This is a fully functioning forum/blog style website which uses the full stack. 
 - Express
 - Express-handlebars
 - Express-session
-- Mysql2
 - Sequelize
 - Deployed to Heroku with JawsDB database
 
 
-## Contact
-    Contact Me With Any Questions, Comments or Anything Else
-https://github.com/grey-whitt
+## Questions
 
-greywhitt@gmail.com
+---
 
+If you have any questions feel free to email me or find me on LinkedIn
 
-[License](./contributor_covenant.md)
+[greywhitt@gmail.com](mailto:greywhitt@gmail.com)
 
-Greyson Whittenberger 2020
+[My LinkedIn](https://www.linkedin.com/in/grey-whittenberger)
+
+[www.greywhitt.com](https://www.greywhitt.com/)
+
+## Contributing:
+
+---
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](./uploads/CODE_OF_CONDUCT.md)
+
+Contributions, issues and feature requests are welcome.
+
+## License:
+
+---
+
+![MIT License](https://img.shields.io/badge/license-MIT-blue)
+
+Copyright 2022 Grey Whittenberger
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For more information about licenses, please visit:
+[License](https://opensource.org/licenses/MIT)
